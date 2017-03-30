@@ -109,7 +109,14 @@ function checkRoundWinner(playerPick, computerPick) {
         computerResultElem.innerHTML = " Wygrana! ";
         computer.score++;
     }
-
+    setGamePoints();
+        if (player.score >= 3) {
+            document.getElementById("finalResult").innerHTML = "You are master, You won the game! you are better than Chuck Norris, wow!!!";
+        }
+        if (computer.score >= 3) {
+            document.getElementById("finalResult").innerHTML = "That must be some mistake with game code. Computer was lucky this time.";
+        }
+        
 }
 
 function playerPick(playerPick) {
@@ -131,13 +138,5 @@ function setGamePoints() {
 
 
 
-//document.getElementById("playerPoints").innerHTML = player.score;
-//document.getElementById("computerPoints").innerHTML = computer.score;
-
-//if ( (player.score >= 3) || (computer.score >=3) ) {
-//if (player.score > computer.score) {
-//document.getElementById("finalResult").innerHTML = "You are master, You win the game!";}
-//else {
-//document.getElementById("finalResult").innerHTML = "Oh No! That shiny computer is better than you and wins the game!";}
 
 
